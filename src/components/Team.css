@@ -1,0 +1,46 @@
+body { 
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/a4b33886128681.5d909dad47ded.jpg');
+    background-repeat: no-repeat;
+}
+
+.card-container{ 
+    margin: auto; 
+    margin-top: 50px;
+    width: 300px; 
+    overflow: hidden; 
+    box-shadow: 0px 0px 15px -5px; 
+    transition: 0.3s; 
+    animation: ease-in; 
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    
+    border-radius: 12px;
+    
+} 
+.card-container:hover{   
+    transform: scale(1.1);
+   box-shadow: 5px 10px 20px 1px rgb(83, 80, 80);
+  } 
+
+.image-container img{  
+    
+    overflow: hidden; 
+    height: 200px;
+}
+ .card-content{ 
+     margin: 1rem;
+     margin-top: 0.5rem;
+ } 
+ h1,p{ 
+     margin: 0; 
+     padding: 0; 
+     text-align: center;
+     margin-top: 10px; 
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-weight: bold;
+ }
+
+.card-text{ 
+    font-size: 1rem;
+    padding: 0.1rem 0.9rem ;
+  } 
