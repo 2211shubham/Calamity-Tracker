@@ -30,7 +30,7 @@ body {
 }
 .location-icon {
   font-size: 2rem;
-  color: rgb(228, 34, 34);
+  color: rgb(245, 51, 51);
 }
 .warning-icon {
   font-size: 2rem;
@@ -38,7 +38,7 @@ body {
 }
 .storm-icon {
   font-size: 2rem;
-  color: rgb(0, 195, 255);
+  color: rgb(34, 162, 201);
 }
 .volcano-icon {
   font-size: 2rem;
@@ -47,7 +47,7 @@ body {
 }
 .snow-icon {
   font-size: 2rem;
-  color: aqua;
+  color: rgb(10, 146, 146);
   z-index: 100;
 }
 .cross-icon {
