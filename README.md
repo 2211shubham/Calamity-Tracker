@@ -1,3 +1,7 @@
+<h2> Look into the world map and trace out the places of different disasters happening currently in and around the world with Calamity Tracker.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
