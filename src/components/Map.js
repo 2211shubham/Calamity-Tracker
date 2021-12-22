@@ -5,8 +5,10 @@ import ReactMapGL, {Marker} from "react-map-gl";
 import {Icon} from "@iconify/react";
 import FireIcon from "@iconify/icons-mdi/fire-alert";
 import stormIcon from "@iconify/icons-mdi/storm-advisory";
+import ls from 'local-storage';
+// app.js 
 
-// app.js
+
 
 const Map = ({eventData, center, zoom}) => {
   const [locationInfo, setLocationInfo] = useState(null);
@@ -24,7 +26,7 @@ const Map = ({eventData, center, zoom}) => {
         <Marker
           longitude={ev.geometries[0].coordinates[0]}
           latitude={ev.geometries[0].coordinates[1]}
-          onClick={() => alert("Title:" + ev.title)}
+          onClick={() => setLocationInfo({id: ev.id, title: ev.title, isOpen: ls.set("isOpen", "true")})}
         >
           <Icon icon={FireIcon} className="location-icon" />
         </Marker>
@@ -35,7 +37,7 @@ const Map = ({eventData, center, zoom}) => {
         <Marker
           longitude={ev.geometries[0].coordinates[0]}
           latitude={ev.geometries[0].coordinates[1]}
-          onClick={() => alert("Title:" + ev.title)}
+          onClick={() => setLocationInfo({id: ev.id, title: ev.title, isOpen: ls.set("isOpen", "true")})}
         >
           <Icon icon="twemoji:volcano" className="location-icon" />
         </Marker>
@@ -46,7 +48,7 @@ const Map = ({eventData, center, zoom}) => {
         <Marker
           longitude={ev.geometries[0].coordinates[0]}
           latitude={ev.geometries[0].coordinates[1]}
-          onClick={() => alert("Title:" + ev.title)}
+          onClick={() => setLocationInfo({id: ev.id, title: ev.title, isOpen: ls.set("isOpen", "true")})}
         >
           <Icon icon={stormIcon} className="storm-icon" />
         </Marker>
@@ -57,7 +59,7 @@ const Map = ({eventData, center, zoom}) => {
         <Marker
           longitude={ev.geometries[0].coordinates[0]}
           latitude={ev.geometries[0].coordinates[1]}
-          onClick={() => alert("Title:" + ev.title)}
+          onClick={() => setLocationInfo({id: ev.id, title: ev.title, isOpen: ls.set("isOpen", "true")})}
         >
           <Icon icon="openmoji:iceberg" className="location-icon" />
         </Marker>
@@ -80,10 +82,16 @@ const Map = ({eventData, center, zoom}) => {
         {markers}
       </ReactMapGL>
 
-      {locationInfo && <LocationInfoBox info={locationInfo} />}
+      {locationInfo  && <LocationInfoBox info={locationInfo} 
+
+        
+      /> }
     </div>
   );
-};
+}; 
+
+
+
 
 Map.defaultProps = {
   center: {
@@ -91,6 +99,8 @@ Map.defaultProps = {
     lng: 78.9629,
   },
   zoom: 6,
-};
+}; 
+
+
 
 export default Map;
